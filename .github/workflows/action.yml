@@ -1,4 +1,4 @@
-name: "Github Actions COVID19 Bot"
+name: "Github ORM CI/CD actions"
 
 on:
   push:
