@@ -1,19 +1,25 @@
 {
   "name": "orm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --signal SIGINT dist/index",
-    "watch": "rimraf dist && tsc --watch"
+    "watch": "rimraf dist && tsc --watch",
+    "test": "jest",
+    "rel": "standard-version"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^26.0.5",
     "@types/pg": "^7.14.4",
+    "jest": "^26.1.0",
     "nodemon": "^2.0.4",
     "rimraf": "^3.0.2",
+    "standard-version": "^8.0.2",
+    "ts-jest": "^26.1.3",
     "typescript": "^3.9.7"
   },
   "dependencies": {
