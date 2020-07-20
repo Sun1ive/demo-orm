@@ -1,0 +1,24 @@
+name: "Github Actions COVID19 Bot"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  bot:
+    name: "build bot"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout repo"
+      - uses: actions/checkout@v2
+      - name: "Install node"
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: "12"
+      - name: "Install npm packages"
+        run: npm install
+      - name: "Compile typescript"
+        run: npm run build
+      - name: "Run tests"
+        run: npm test
