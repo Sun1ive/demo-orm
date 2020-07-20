@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --signal SIGINT dist/index",
+    "build": "rimraf dist && tsc",
     "watch": "rimraf dist && tsc --watch",
     "test": "jest",
     "rel": "standard-version"
